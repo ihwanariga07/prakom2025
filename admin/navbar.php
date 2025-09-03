@@ -6,7 +6,7 @@
   <title>Prakom 2025</title>
 
   <!-- Bootstrap CSS -->
-
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 </head>
 <body style="background-color: #67C090">
 
@@ -14,7 +14,7 @@
   <nav class="navbar navbar-expand-lg" style="background-color: #26667F" data-bs-theme="dark" >
     <div class="container-fluid">
       <a class="navbar-brand" href="#">
-        <img src="../image/logo3.png" alt="Logo3" width="100" height="40" class="me-0">
+        <img src="/prakom2025/image/logo3.png" alt="Logo3" width="100" height="40" class="me-0">
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -23,18 +23,17 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
+            <a class="nav-link active" aria-current="page" href="/prakom2025/admin/index.php">Home</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               MENU
             </a>
             <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="/prakom2025/admin/pasien/index.php">Data Pasien</a></li>
               <li><a class="dropdown-item" href="#">Data Berobat</a></li>
-              <li><a class="dropdown-item" href="#">Data Pasien</a></li>
-              <!-- <li><hr class="dropdown-divider"></li> -->
               <li><a class="dropdown-item" href="#">Data Dokter</a></li>
-             <li><a class="dropdown-item" href="#">Data Poli</a></li>
+             <li><a class="dropdown-item" href="/prakom2025/admin/poli/index.php">Data Poli</a></li>
             </ul>
           </li>
                     <li class="nav-item dropdown">
@@ -42,9 +41,9 @@
               LAPORAN
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">List Berobat</a></li>
               <li><a class="dropdown-item" href="#">List Pasien</a></li>
-              <!-- <li><hr class="dropdown-divider"></li> -->
+              <li><a class="dropdown-item" href="#">List Berobat</a></li>
+
               <li><a class="dropdown-item" href="#">List Dokter</a></li>
              <li><a class="dropdown-item" href="#">List Poli</a></li>
             </ul>
@@ -59,6 +58,6 @@
   </nav>
 
   <!-- Bootstrap JS -->
-
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>
 </html>

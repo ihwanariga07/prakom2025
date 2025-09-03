@@ -6,7 +6,7 @@
   <title>Prakom 2025</title>
 
   <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+
 </head>
 <body style="background-color: #67C090">
   <?php
@@ -32,6 +32,6 @@
     </div>
   </div>
   <!-- Bootstrap JS -->
-  <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>
