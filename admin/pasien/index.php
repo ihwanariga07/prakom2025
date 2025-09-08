@@ -21,7 +21,7 @@
             Klinik Sehat
           </div>
           <div class="card-body">
-            <a href="" class="btn btn-primary">Tambah</a>
+            <a href="/prakom2025/admin/pasien/form.php" class="btn btn-primary">Tambah</a>
             <table class="table">
               <thead>
                 <tr>
