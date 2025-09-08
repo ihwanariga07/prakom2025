@@ -12,5 +12,5 @@ $alamat = $_POST["alamat"];
 $qry = mysql_query("INSERT INTO pasien (Nama_pasienKliniK, Tanggal_LahirPasien, 	Jenis_KelaminPasien	, Alamat_Pasien VALUES ('$nama, $tgl, $jk, $alamat')");
 
 #pengalihan halaman jika proses tambah selesai
-
+header("location:index.php");
 ?>
