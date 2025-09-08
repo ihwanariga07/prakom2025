@@ -54,11 +54,10 @@
                   <td><?=$row['Jenis_KelaminPasien']?></td>
                   <td><?=$row['Alamat_Pasien']?></td>
                   <td>
-                    <a href="" class="btn btn-info btn-sm"><i class="fa-solid fa-pen"></i></a>
+                    <a href="" class="btn btn-success btn-sm" ><i class="fa-solid fa-pen"></i></a>
+                    <a href="" class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></a>
                   </td>    
-                  <td>
-                    <a href="" class="btn btn-info btn-sm"><i class="fa-solid fa-trash"></i></a>
-                  </td>                
+             
                 </tr>
                   <?php
                    }
