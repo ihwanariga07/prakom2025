@@ -56,7 +56,7 @@
                   <td><?=$row['Jenis_KelaminPasien']?></td>
                   <td><?=$row['Alamat_Pasien']?></td>
                   <td>
-                    <a href="" class="btn btn-success btn-sm" ><i class="fa-solid fa-pen"></i></a>
+                    <a href="edit.php?id=<?=$row['pasienKliniK_ID']?>" class="btn btn-success btn-sm" ><i class="fa-solid fa-pen"></i></a>
                     <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal" <?=$row['pasienKliniK_ID']?>><i class="fa-solid fa-trash"></i>
                     </button>
                     <!-- Modal -->
