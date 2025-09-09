@@ -38,7 +38,7 @@
                 #koneksi
                 include('../koneksi.php');
                 #menuliskan query
-                $qry = "SELECT * FROM pasien";
+                $qry = "SELECT * FROM pasien ORDER BY Nama_PasienKliniK ASC";
 
                 #menjalankan query
                 $result = mysqli_query($koneksi, $qry);

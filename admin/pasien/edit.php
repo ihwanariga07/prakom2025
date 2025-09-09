@@ -9,13 +9,11 @@ $id = $_GET["id"];
 $qry = mysqli_query($koneksi,"SELECT * FROM pasien WHERE pasienKliniK_ID = '$id'");
 $row = mysqli_fetch_array($qry);
 
-$nama = $row["Nama_pasienKlinik"];
+$nama = $row["Nama_pasienKliniK"];
 $tgl_lahir = $row["Tanggal_LahirPasien"];
 $jk = $row["Jenis_KelaminPasien"];
 $alamat = $row["Alamat_Pasien"];
 ?>
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -40,16 +38,16 @@ $alamat = $row["Alamat_Pasien"];
                         <b>Form Edit Data Pasien</b>
                     </div>
                     <div class="card-body">
-                        <form method="post" action="proses_form.php">
-                            <input type="hidden" value="<?=$id?>" name="idedit" id="" ?>
+                        <form method="post" action="proses_edit.php">
+                            <input type="hidden" value="<?=$id?>" name="idedit" id="">
                             <div class="mb-3">
                                 <label for="exampleInputEmail1" class="form-label">Nama Pasien</label>
-                                <input name="nama" value="<?=$nama?>"   placeholder="Masukkan nama Lengkap" type="text" class="form-control" id="exampleInputEmail1"
+                                <input name="nama" value="<?=$nama?>" placeholder="Masukkan nama Lengkap" type="text" class="form-control" id="exampleInputEmail1"
                                     aria-describedby="emailHelp">
                             </div>
                             <div class="mb-3">
                                 <label for="exampleInputPassword1" class="form-label">Tanggal Lahir</label>
-                                <input name="tgl" value="<?=$tgl_lahir?>" type="date" class="form-control" id="exampleInputPassword1">
+                                <input value="<?=$tgl_lahir?>" name="tgl" type="date" class="form-control" id="exampleInputPassword1">
                             </div>
                             <div class="mb-3">
                                 <label for="exampleInputPassword1" class="form-label">Jenis Kelamin</label>
@@ -61,7 +59,7 @@ $alamat = $row["Alamat_Pasien"];
                             </div>
                             <div class="mb-3">
                                 <label for="exampleInputPassword1" class="form-label">Alamat</label>
-                                <input name="alamat" value="<?=$alamat ?>" type="text" placeholder="Masukkan Alamat Lengkap" class="form-control" id="exampleInputPassword1">
+                                <input name="alamat" value="<?=$alamat?>" type="text" placeholder="Masukkan Alamat Lengkap" class="form-control" id="exampleInputPassword1">
                             </div>
 
                             <button type="submit" class="btn btn-primary">Edit</button>
