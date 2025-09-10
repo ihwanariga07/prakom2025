@@ -10,7 +10,9 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
 </head>
 <body style="background-color: #67C090">
-  <?php include('../navbar.php'); ?>
+    <?php
+  include('../navbar.php');
+  ?>
 
   <div class="container">
     <div class="row">
@@ -35,14 +37,15 @@
                 include('../koneksi.php');
 
                 # query
-                $qry = "SELECT * FROM poli";
+                $qry = "SELECT * FROM poli ORDER BY Nama_Poli ASC";
+                #menjalankan query
                 $result = mysqli_query($koneksi, $qry);
 
-                $no = 1;
-                while($row = mysqli_fetch_assoc($result)) :
+                $nomor = 1;
+                foreach ($result as $row){
                 ?>
                 <tr>
-                  <td><?= $no++; ?></td>
+                  <td><?= $nomor++; ?></td>
                   <td><?= $row['Nama_Poli']; ?></td>
                   <td>
                     <!-- Tombol Edit -->
@@ -64,14 +67,14 @@
                           </div>
                           <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
-                            <a href="" class="btn btn-danger">Hapus</a>
+                            <a href="hapus.php?id=<?=$row['Poli_ID']?>" class="btn btn-danger">Hapus</a>
                           </div>
                         </div>
                       </div>
                     </div>
                   </td>    
                 </tr>
-                <?php endwhile; ?>
+                <?php } ?>
               </tbody>
             </table>
           </div>
@@ -80,7 +83,7 @@
     </div>
   </div>
 
-  <!-- Bootstrap JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+
 </body>
 </html>

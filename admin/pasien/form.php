@@ -19,7 +19,9 @@
             <div class="col-10 m-auto mt-5">
                 <div class="card">
                     <div class="card-header">
+                        <a href="index.php" class="btn btn-sm btn-secondary">← Kembali</a>
                         <b>Form Tambah Data Pasien</b>
+                        
                     </div>
                     <div class="card-body">
                         <form method="post" action="proses_edit.php">
