@@ -32,7 +32,7 @@
             <ul class="dropdown-menu">
               <li><a class="dropdown-item" href="/prakom2025/admin/pasien/index.php">Data Pasien</a></li>
               <li><a class="dropdown-item" href="#">Data Berobat</a></li>
-              <li><a class="dropdown-item" href="#">Data Dokter</a></li>
+              <li><a class="dropdown-item" href="/prakom2025/admin/dokter/index.php">Data Dokter</a></li>
              <li><a class="dropdown-item" href="/prakom2025/admin/poli/index.php">Data Poli</a></li>
             </ul>
           </li>
