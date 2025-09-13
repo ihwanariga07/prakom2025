@@ -7,6 +7,8 @@
     <title>Klinik Sehat</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
 </head>
 
 <body style="background-color: #67C090;">
@@ -53,10 +55,10 @@
                                         <td><?= $row['Nama_Dokter'] ?></td>
                                         <td><?= $row['Nama_Poli'] ?></td>
                                         <td>
-                                            <a href="edit.php?id=<?=$row['Dokter_ID'] ?>" class="btn btn-info btn-sm">edit</a>
+                                            <a href="edit.php?id=<?=$row['Dokter_ID'] ?>" class="btn btn-info btn-sm"><i class="fa-solid fa-pen"></i></a>
                                             <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal"
                                                 data-bs-target="#exampleModal<?=$row['Dokter_ID'] ?>">
-                                                Hapus
+                                                <i class="fa-solid fa-trash"></i>
                                             </button>
                                             <!-- Modal -->
                                             <div class="modal fade" id="exampleModal<?=$row['Dokter_ID'] ?>" tabindex="-1"
@@ -70,7 +72,7 @@
                                                                 aria-label="Close"></button>
                                                         </div>
                                                         <div class="modal-body">
-                                                            Yakin data Dokter <b><?= $row['Nama_Dokter'] ?></b> ingin dihapus?
+                                                            Anda Yakin Ingin Menghapus Data <b><?= $row['Nama_Dokter'] ?></b> 
                                                         </div>
                                                         <div class="modal-footer">
                                                             <button type="button" class="btn btn-secondary"
