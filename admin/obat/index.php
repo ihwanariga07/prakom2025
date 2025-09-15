@@ -14,7 +14,7 @@
 
   <div class="container">
     <div class="row">
-      <div class="col-10 m-auto mt-5">
+      <div class="col-12 m-auto mt-5">
         <div class="card">
           <div class="card-header">
             Klinik Sehat
@@ -26,7 +26,7 @@
                     <tr>
                     <th>No Transaksi</th>
                     <th>Nama Pasien</th>
-                    <th>Tanggal</th>
+                    <th>Tanggal Berobat</th>
                     <th>Usia</th>
                     <th>Jenis Kelamin</th>
                     <th>Keluhan</th>
@@ -39,34 +39,32 @@
                 <tbody>
                 <?php
                 include('../koneksi.php');
-                $qry = "SELECT 
-                            berobat.No_Transaksi,
-                            berobat.Tanggal_Berobat,
-                            pasien.Nama_pasienKliniK,
-                            TIMESTAMPDIFF(YEAR, pasien.Tanggal_LahirPasien, CURDATE()) AS usia,
-                            pasien.Jenis_KelaminPasien,
-                            berobat.Keluhan_Pasien,
-                            poli.Nama_Poli,
-                            dokter.Nama_Dokter,
-                            berobat.Biaya_Adm
-                        FROM berobat
-                        JOIN pasien ON berobat.PasienKliniK_ID = pasien.pasienKliniK_ID
-                        JOIN dokter ON berobat.Dokter_ID = dokter.Dokter_ID
-                        JOIN poli ON dokter.Poli_ID = poli.Poli_ID
-                        ORDER BY berobat.Tanggal_Berobat DESC";
+                $qry = "SELECT * FROM berobat 
+                INNER JOIN pasien ON berobat.PasienKlinik_ID=pasien.pasienKlinik_ID
+                INNER JOIN dokter ON berobat.Dokter_ID=dokter.Dokter_ID
+                INNER JOIN poli ON dokter.Poli_ID=poli.Poli_ID";
 
-            $result = mysqli_query($koneksi, $qry);
-            $nomor=1;  
-            foreach ($result as $row) { 
-             $tgl_lahir = new DateTime($row['Tanggal_LahirPasien']);
-              $today = new DateTime();
-              $usia = $today->diff($tgl_lahir)->y;
-              ?>
+                 #3. menjalankan query
+                $result = mysqli_query($koneksi, $qry);
+
+                #4. melakukan looping data Dokter
+                $nomor = 1;
+                foreach ($result as $row) {
+                     //memformat ulang tanggal berobat
+                     $tgl_berobat = date_create($row['Tanggal_Berobat']);
+                     $tgl_berobat = date_format($tgl_berobat, 'd/m/Y');
+
+                    //membuat usia pasien
+                    $tanggal_lahir = new DateTime($row['Tanggal_LahirPasien']);
+                    $sekarang = new DateTime("today");
+                    $usia = $sekarang->diff($tanggal_lahir)->y;
+                    ?>
+
                 <tr>
                 <td><?= $row['No_Transaksi'] ?></td>
                 <td><?= $row['Nama_pasienKliniK'] ?></td>
                 <td><?= date('d-m-Y', strtotime($row['Tanggal_Berobat'])) ?></td>
-                <td><?= $row['usia'] ?></td>
+                <td><?= $usia ?></td>
                 <td><?= $row['Jenis_KelaminPasien'] ?></td>
                 <td><?= $row['Keluhan_Pasien'] ?></td>
                 <td><?= $row['Nama_Poli'] ?></td>
