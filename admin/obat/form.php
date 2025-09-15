@@ -19,10 +19,10 @@
                         <b>Form Tambah Data Berobat</b>
                     </div>
                     <div class="card-body">
-                        <form method="post" action="proses_tambah.php">
+                        <form method="post" action="proses_form.php">
                             <div class="mb-3">
                                 <label class="form-label">No Transaksi</label>
-                                <input name="no_transaksi" type="text" class="form-control" placeholder="Masukkan No Transaksi" required>
+                                <input name="trans" type="text" class="form-control" placeholder="Masukkan No Transaksi" required>
                             </div>
 
                             <div class="mb-3">
@@ -87,7 +87,7 @@
 
                             <div class="mb-3">
                                 <label class="form-label">Nama Pasien</label>
-                                <select name="pasien_id" class="form-select" required>
+                                <select name="psn" class="form-select" required>
                                     <option value="" selected disabled>Pilih Pasien</option>
                                     <?php
                                     include('../koneksi.php');
@@ -101,7 +101,7 @@
 
                             <div class="mb-3">
                                 <label class="form-label">Dokter</label>
-                                <select name="dokter_id" class="form-select" required>
+                                <select name="dr" class="form-select" required>
                                     <option value="" selected disabled>Pilih Dokter</option>
                                     <?php
                                     $dokter = mysqli_query($koneksi, "SELECT Dokter_ID, Nama_Dokter FROM dokter ORDER BY Nama_Dokter ASC");

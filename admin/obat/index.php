@@ -25,8 +25,8 @@
                 <thead>
                     <tr>
                     <th>No Transaksi</th>
-                    <th>Tanggal</th>
                     <th>Nama Pasien</th>
+                    <th>Tanggal</th>
                     <th>Usia</th>
                     <th>Jenis Kelamin</th>
                     <th>Keluhan</th>
@@ -56,13 +56,16 @@
                         ORDER BY berobat.Tanggal_Berobat DESC";
 
             $result = mysqli_query($koneksi, $qry);
-            
-
-            foreach ($result as $row) { ?>
+            $nomor=1;  
+            foreach ($result as $row) { 
+             $tgl_lahir = new DateTime($row['Tanggal_LahirPasien']);
+              $today = new DateTime();
+              $usia = $today->diff($tgl_lahir)->y;
+              ?>
                 <tr>
                 <td><?= $row['No_Transaksi'] ?></td>
-                <td><?= date('d-m-Y', strtotime($row['Tanggal_Berobat'])) ?></td>
                 <td><?= $row['Nama_pasienKliniK'] ?></td>
+                <td><?= date('d-m-Y', strtotime($row['Tanggal_Berobat'])) ?></td>
                 <td><?= $row['usia'] ?></td>
                 <td><?= $row['Jenis_KelaminPasien'] ?></td>
                 <td><?= $row['Keluhan_Pasien'] ?></td>
