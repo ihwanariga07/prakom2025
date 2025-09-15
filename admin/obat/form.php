@@ -27,7 +27,62 @@
 
                             <div class="mb-3">
                                 <label class="form-label">Tanggal Berobat</label>
-                                <input name="tgl_berobat" type="date" class="form-control" required>
+                                <div class="row">
+                                    <div class="col-4">
+                                        <select class="form-control" name="tgl" id="">
+                                            <option value="">Pilih Tanggal</option>
+                                            <?php
+                                            for ($i = 1; $i <= 31; $i++) {
+                                             ?>
+                                                        <option value="<?=$i?>"><?=$i?></option>
+                                                        <?php
+                                            }
+                                            ?>
+                                        </select>
+                                    </div>
+                                    <div class="col-4">
+                                        <select class="form-control" name="bln" id="">
+                                            <option value="">Pilih Bulan</option>
+                                            <?php
+                                            $bulan = [
+                                                1 => 'Januari',
+                                                2 => 'Februari',
+                                                3 => 'Maret',
+                                                4 => 'April',
+                                                5 => 'Mei',
+                                                6 => 'Juni',
+                                                7 => 'Juli',
+                                                8 => 'Agustus',
+                                                9 => 'September',
+                                                10 => 'Oktober',
+                                                11 => 'November',
+                                                12 => 'Desember'
+                                            ];
+                                            foreach ($bulan as $key => $namaBulan) {
+                                                ?>
+                                                <option value="<?= $key ?>"><?= $namaBulan ?></option>
+                                                <?php
+                                            }
+                                            ?>
+                                        </select>
+                                    </div>
+                                    <div class="col-4">
+                                        <select class="form-control" name="thn" id="">
+                                        <option value="">Pilih Tahun</option>
+                                        <?php
+                                        $tahunSekarang = date("Y"); 
+                                        $tahunAwal     = 2000;   
+
+                                        for ($thn = $tahunSekarang; $thn >= $tahunAwal; $thn--) {
+                                            ?>
+                                            <option value="<?= $thn ?>"><?= $thn ?></option>
+                                            <?php
+                                        }
+                                        ?>
+                                    </select>
+                                    </div>
+
+                                </div>
                             </div>
 
                             <div class="mb-3">
