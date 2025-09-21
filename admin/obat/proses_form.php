@@ -14,8 +14,9 @@ $dokter = $_POST["dr"];
 $keluhan = $_POST["keluhan"];
 $biaya = $_POST["biaya"];  
 #3. menuliskan query tambah data ke tabel
-$qry = mysqli_query($koneksi,"INSERT INTO berobat (No_Transaksi,PasienKliniK_ID,Tanggal_Berobat,Dokter_ID,Keluhan_Pasien,Biaya_Adm)
-VALUES('$trans','$pasien','$tanggal','$dokter','$keluhan','$biaya')");
+$qry = mysqli_query($koneksi,"INSERT INTO berobat 
+(No_Transaksi, PasienKlinik_ID, Tanggal_Berobat, Dokter_ID, Keluhan_Pasien, Biaya_Adm)
+VALUES('$trans', '$pasien', '$tanggal', '$dokter', '$keluhan', '$biaya')");
 
 #5. pengalihan halaman jika proses tambah selesai
 header("location:index.php");

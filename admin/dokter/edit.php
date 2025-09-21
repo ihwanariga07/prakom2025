@@ -38,6 +38,7 @@ $poli = $row["Poli_ID"];
             <div class="col-10 m-auto mt-5">
                 <div class="card">
                     <div class="card-header">
+                        <a href="index.php" class="btn btn-sm btn-secondary">← Kembali</a>
                         <b>Form Edit Data Dokter</b>
                     </div>
                     <div class="card-body">
@@ -72,9 +73,7 @@ $poli = $row["Poli_ID"];
             </div>
         </div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-        crossorigin="anonymous"></script>
+
 </body>
 
 </html>
