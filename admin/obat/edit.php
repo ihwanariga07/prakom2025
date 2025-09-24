@@ -51,6 +51,7 @@ $biaya = $row["Biaya_Adm"];
                     </div>
                     <div class="card-body">
                         <form method="post" action="proses_edit.php">
+                            <input type="hidden" name="idedit" value="<?=$id?>">
                             <div class="mb-3">
                                 <label for="exampleInputEmail1" class="form-label">No Transaksi</label>
                                 <input value="<?=$trans?>" readonly name="trans" type="text" class="form-control" id="exampleInputEmail1"
