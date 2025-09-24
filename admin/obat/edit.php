@@ -14,8 +14,7 @@ $qry = mysqli_query($koneksi, "SELECT * FROM berobat WHERE No_Transaksi = '$id'"
 $row = mysqli_fetch_array($qry);
 
 $trans = $row["No_Transaksi"];
-$pasien = $row["PasienKlinik_ID"];
-
+$pasien = $row["pasienKliniK_ID"];
 $tgl_berobat = $row["Tanggal_Berobat"];
 $pecah_tgl = explode("-", $tgl_berobat);
 $thn = $pecah_tgl[0];
@@ -67,7 +66,7 @@ $biaya = $row["Biaya_Adm"];
                                     $qry = mysqli_query($koneksi, "SELECT * FROM pasien");
                                     foreach ($qry as $row) {
                                         ?>
-                                        <option <?php echo ($pasien==$row['pasienKlinik_ID']) ? 'selected' : '' ?> value="<?= $row['pasienKlinik_ID'] ?>"><?= $row['Nama_pasienKlinik'] ?></option>
+                                        <option <?php echo ($pasien==$row['pasienKliniK_ID']) ? 'selected' : '' ?> value="<?= $row['pasienKliniK_ID'] ?>"><?= $row['Nama_pasienKliniK'] ?></option>
                                         <?php
                                     }
                                     ?>
@@ -150,7 +149,7 @@ $biaya = $row["Biaya_Adm"];
                                 <input value="<?=$biaya?>" name="biaya" type="number" class="form-control" id="exampleInputEmail1"
                                     aria-describedby="emailHelp">
                             </div>
-                            <button type="submit" class="btn btn-primary">Tambah</button>
+                            <button type="submit" class="btn btn-primary">Edit</button>
                         </form>
 
                     </div>

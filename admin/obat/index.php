@@ -40,7 +40,7 @@
                 <?php
                 include('../koneksi.php');
                 $qry = "SELECT * FROM berobat 
-                INNER JOIN pasien ON berobat.PasienKlinik_ID=pasien.pasienKlinik_ID
+                INNER JOIN pasien ON berobat.pasienKliniK_ID=pasien.pasienKliniK_ID
                 INNER JOIN dokter ON berobat.Dokter_ID=dokter.Dokter_ID
                 INNER JOIN poli ON dokter.Poli_ID=poli.Poli_ID";
 
