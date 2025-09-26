@@ -55,7 +55,7 @@
                                         <td><?= $row['Nama_Dokter'] ?></td>
                                         <td><?= $row['Nama_Poli'] ?></td>
                                         <td>
-                                            <a href="edit.php?id=<?=$row['Dokter_ID'] ?>" class="btn btn-info btn-sm"><i class="fa-solid fa-pen"></i></a>
+                                            <a href="edit.php?id=<?=$row['Dokter_ID'] ?>" class="btn btn-success btn-sm"><i class="fa-solid fa-pen"></i></a>
                                             <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal"
                                                 data-bs-target="#exampleModal<?=$row['Dokter_ID'] ?>">
                                                 <i class="fa-solid fa-trash"></i>

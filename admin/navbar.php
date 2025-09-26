@@ -42,7 +42,7 @@
             </a>
             <ul class="dropdown-menu">
               <li><a class="dropdown-item" href="#">List Pasien</a></li>
-              <li><a class="dropdown-item" href="#">List Berobat</a></li>
+              <li><a class="dropdown-item" href="/PRAKOM2025/admin/obat/laporan.php">List Berobat</a></li>
               <li><a class="dropdown-item" href="#">List Dokter</a></li>
              <li><a class="dropdown-item" href="#">List Poli</a></li>
             </ul>

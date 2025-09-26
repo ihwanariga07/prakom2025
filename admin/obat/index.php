@@ -71,7 +71,7 @@
                     <td><?= $row['Keluhan_Pasien'] ?></td>
                     <td><?= $row['Nama_Poli'] ?></td>
                     <td><?= $row['Nama_Dokter'] ?></td>
-                    <td><?= number_format($row['Biaya_Adm'], 0, ',', '.') ?></td>
+                    <td>Rp <?= number_format($row['Biaya_Adm'], 0, ',', '.') ?></td>
                     <td>
                       <a href="edit.php?id=<?= $row['No_Transaksi'] ?>" class="btn btn-success btn-sm">
                         <i class="fa-solid fa-pen"></i>

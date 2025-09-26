@@ -21,14 +21,14 @@
                     <div class="card-header">
                         <a href="index.php" class="btn btn-sm btn-secondary">← Kembali</a>
                         <b>Form Tambah Data Pasien</b>
-                        
+
                     </div>
                     <div class="card-body">
                         <form method="post" action="proses_form.php">
                             <div class="mb-3">
                                 <label for="exampleInputEmail1" class="form-label">Nama Pasien</label>
-                                <input name="nama" placeholder="Masukkan nama Lengkap" type="text" class="form-control" id="exampleInputEmail1"
-                                    aria-describedby="emailHelp">
+                                <input name="nama" placeholder="Masukkan nama Lengkap" type="text" class="form-control"
+                                    id="exampleInputEmail1" aria-describedby="emailHelp">
                             </div>
                             <div class="mb-3">
                                 <label for="exampleInputPassword1" class="form-label">Tanggal Lahir</label>
@@ -44,7 +44,8 @@
                             </div>
                             <div class="mb-3">
                                 <label for="exampleInputPassword1" class="form-label">Alamat</label>
-                                <input name="alamat" type="text" placeholder="Masukkan Alamat Lengkap" class="form-control" id="exampleInputPassword1">
+                                <input name="alamat" type="text" placeholder="Masukkan Alamat Lengkap"
+                                    class="form-control" id="exampleInputPassword1">
                             </div>
 
                             <button type="submit" class="btn btn-primary">Tambah</button>
