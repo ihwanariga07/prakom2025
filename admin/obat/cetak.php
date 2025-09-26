@@ -7,22 +7,59 @@
     <title>Klinik Sehat</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+        <style>
+    @media print {
+        body {
+            background: none !important;
+            -webkit-print-color-adjust: exact;
+        }
+        .container {
+            width: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        .card {
+            border: none !important;
+            box-shadow: none !important;
+        }
+        .card-body {
+            padding: 0;
+        }
+        h1 {
+            margin-bottom: 20px;
+            font-size: 20pt;
+            text-align: center;
+        }
+        table {
+            width: 100% !important;
+            border-collapse: collapse;
+            font-size: 12pt;
+        }
+        table th, table td {
+            border: 1px solid #000;
+            padding: 6px;
+            text-align: center;
+        }
+        .table-success {
+            background-color: #c6efce !important; /* biar warna header tetap ada */
+            -webkit-print-color-adjust: exact;
+        }
+    }
+</style>
+
 </head>
 
-<body style="background-color: #67C090;">
-    <?php
-    include('../navbar.php');
-    ?>
+<body onload="window.print()" style="background-color: #67C090;">
+
     <div class="container">
         <!-- disini kontennya -->
         <div class="row">
             <div class="col-12 m-auto mt-5">
                 <div class="card">
-                    <div class="card-header">
-                        <b>Data Berobat</b>
-                    </div>
+                    
                     <div class="card-body">
-                        <a href="cetak.php" target="_blank" class="btn btn-primary">Print</a>
+                        <h1 class="text-center">Laporan Data Berobat</h1>
+                        <br>
                         <table class="table mt-3 table-striped ">
                             <thead>
                                 <tr class="table-success">
@@ -71,7 +108,7 @@
                                     <tr>
                                         <td><?= $row['No_Transaksi'] ?></td>
                                         <td><?= $tgl_berobat ?></td>
-                                        <td><?= $row['Nama_pasienKlinik'] ?></td>
+                                        <td><?= $row['Nama_pasienKliniK'] ?></td>
                                         <td><?= $usia ?></td>
                                         <td><?= $row['Jenis_KelaminPasien'] ?></td>
                                         <td><?= $row['Keluhan_Pasien'] ?></td>
